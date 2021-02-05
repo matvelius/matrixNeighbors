@@ -5,6 +5,8 @@ var rl = readline.createInterface({
     terminal: false
 });
 
+const z = readline()
+
 var lineIndex = 0
 let matrix = []
 var numberOfRows = 0
@@ -61,7 +63,7 @@ rl.on('line', function (line) {
             }
 
             if (outputArray.length != 0) {
-                console.log(outputArray.sort().join(' '))
+                console.log(outputArray.sort((a, b) => a - b).join(' '))
             }
 
             rl.close()
